@@ -12,7 +12,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231d6fe0'/%3E%3Cpath d='M14 70 L28 30 L28 70 M72 70 L72 30 L86 70 M28 30 Q50 72 72 30 M10 70 H90' stroke='%23fff' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Noto+Sans+Devanagari:wght@500;700&display=swap">
 <script>document.documentElement.classList.add('js');</script>
 <style>
   :root{
@@ -175,6 +175,65 @@
   footer{padding:28px 0;font-size:14.5px;color:var(--muted)}
   footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 
+  /* graha */
+  .links .new{display:inline-flex;align-items:center;gap:6px}
+  .links .new i{font-style:normal;font-size:11px;font-weight:700;background:var(--gold);color:var(--ink);padding:2px 7px;border-radius:999px;letter-spacing:.02em}
+  .graha{--night:#0b1233;--night-2:#18236a;--lav:#b8c2ff;position:relative;overflow:hidden;color:#dfe4ff;
+    background:radial-gradient(900px 520px at 78% 40%,#24318a 0%,rgba(36,49,138,0) 70%),radial-gradient(700px 500px at 5% 100%,#1b2a78 0%,rgba(27,42,120,0) 70%),var(--night)}
+  .graha .stars{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+  .graha .wrap{position:relative;padding-block:112px;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .soon{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:14.5px;color:var(--ink);background:var(--gold);padding:7px 15px 7px 11px;border-radius:999px}
+  .soon .pulse{width:9px;height:9px;border-radius:50%;background:var(--ink);position:relative}
+  .soon .pulse::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--ink);opacity:.5;animation:ping 1.8s ease-out infinite}
+  @keyframes ping{from{transform:scale(.6);opacity:.6}to{transform:scale(1.6);opacity:0}}
+  .g-brand{display:flex;align-items:center;gap:16px;margin-top:26px}
+  .g-brand svg{width:64px;height:64px;flex-shrink:0;filter:drop-shadow(0 10px 24px rgba(244,169,0,.35))}
+  .graha h2{color:#fff;font-size:clamp(46px,6.4vw,84px);font-weight:800;letter-spacing:-.035em;line-height:1}
+  .g-dev{font-family:'Noto Sans Devanagari',var(--display);font-weight:700;color:var(--gold);font-size:clamp(22px,2.4vw,30px);margin-top:4px}
+  .g-tag{font-family:var(--display);color:#fff;font-size:clamp(22px,2.4vw,30px);font-weight:600;margin-top:26px;line-height:1.2;max-width:22ch}
+  .graha .g-lead{margin-top:16px;font-size:18px;max-width:50ch;color:#c9d0f5}
+  .g-feats{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:14px;max-width:520px}
+  .g-feats li{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.05);border:1px solid rgba(184,194,255,.16);border-radius:16px;padding:14px 16px}
+  .g-feats .ic{width:38px;height:38px;border-radius:11px;background:rgba(244,169,0,.14);display:grid;place-items:center;flex-shrink:0}
+  .g-feats .ic svg{width:21px;height:21px;fill:none;stroke:var(--gold);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .g-feats b{display:block;color:#fff;font-weight:600;font-size:16.5px}
+  .g-feats span{display:block;font-size:15px;color:#aeb7e6;margin-top:2px}
+  .g-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:32px}
+  .g-plat{display:flex;gap:10px}
+  .g-plat span{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;color:#fff;border:1.5px solid rgba(184,194,255,.35);padding:10px 14px;border-radius:12px}
+  .g-plat svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .g-stage{position:relative;display:grid;place-items:center;min-height:600px}
+  .orbits{position:absolute;width:min(620px,120%);aspect-ratio:1;left:50%;top:50%;transform:translate(-50%,-50%)}
+  .orbits .ring{fill:none;stroke:rgba(184,194,255,.18);stroke-width:1.2}
+  .orbits .spin{transform-origin:300px 300px;animation:spin 60s linear infinite}
+  .orbits .spin.s2{animation-duration:90s;animation-direction:reverse}
+  .orbits .spin.s3{animation-duration:130s}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .phone{position:relative;width:292px;border-radius:46px;padding:12px;background:linear-gradient(160deg,#2b3677,#10173f);box-shadow:0 40px 80px -30px rgba(0,0,0,.7),inset 0 0 0 1.5px rgba(184,194,255,.3);transform:rotate(-4deg)}
+  .screen{border-radius:36px;overflow:hidden;background:#fbf7ee;color:#1d1a3a;position:relative}
+  .notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:92px;height:26px;border-radius:14px;background:#0b1233;z-index:2}
+  .sb{display:flex;justify-content:space-between;padding:14px 24px 0;font-size:12px;font-weight:600;color:#1d1a3a}
+  .app-top{display:flex;align-items:center;justify-content:space-between;padding:26px 20px 6px}
+  .app-top .nm{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.02em}
+  .app-top .nm em{font-style:normal;color:#e29a00}
+  .app-top .av{width:32px;height:32px;border-radius:50%;background:#e9e2ff;display:grid;place-items:center;font-weight:700;font-size:13px;color:#3b3a8a}
+  .app-sub{padding:0 20px;font-size:12.5px;color:#6b6790}
+  .chart{margin:12px 16px 0;background:#fff;border-radius:18px;padding:10px;box-shadow:0 8px 24px -14px rgba(29,26,58,.35)}
+  .chart svg{width:100%;height:auto;display:block}
+  .chart text{font-family:'Noto Sans Devanagari',sans-serif;font-weight:700}
+  .rf{margin:12px 16px 18px;background:#1d1a3a;color:#fff;border-radius:18px;padding:14px 16px}
+  .rf .t{font-family:'Noto Sans Devanagari',var(--body);font-weight:700;font-size:15px;display:flex;justify-content:space-between;align-items:center}
+  .rf .t small{font-family:var(--body);font-weight:600;font-size:11px;background:var(--gold);color:#1d1a3a;padding:2px 8px;border-radius:999px}
+  .rf .bar{height:7px;border-radius:4px;background:rgba(255,255,255,.22);margin-top:9px}
+  .tabs{display:flex;justify-content:space-around;padding:10px 12px 16px;border-top:1px solid #ece6d8}
+  .tabs i{width:22px;height:22px;border-radius:7px;background:#e3dccb}
+  .tabs i.on{background:#e29a00}
+  @media (max-width:860px){
+    .graha .wrap{grid-template-columns:1fr;padding-block:84px}
+    .g-stage{min-height:560px}
+  }
+  @media (max-width:520px){ .phone{width:260px} .g-stage{min-height:500px} }
+
   /* responsive */
   @media (max-width:980px){
     .links,.nav .btn{display:none}
@@ -220,7 +279,7 @@
     </a>
     <nav class="links" aria-label="Sections">
       <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
-      <a href="#experience">Experience</a><a href="#education">Education</a>
+      <a href="#graha" class="new">Graha <i>New</i></a><a href="#experience">Experience</a><a href="#education">Education</a>
     </nav>
     <a class="btn btn-sky" href="#contact">Get in touch</a>
     <button class="burger" id="burger" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
@@ -229,7 +288,7 @@
   </div>
   <nav class="mobile-menu" id="mobileMenu" aria-label="Sections">
     <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
-    <a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    <a href="#graha">Graha (coming soon)</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a>
   </nav>
 </header>
 
@@ -431,6 +490,72 @@
   </div>
 </section>
 
+<section class="graha" id="graha" aria-labelledby="graha-title">
+  <svg class="stars" viewBox="0 0 1200 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="#fff"><circle cx="389" cy="115" r="0.7" opacity="0.35"/><circle cx="986" cy="72" r="1.8" opacity="0.35"/><circle cx="1092" cy="163" r="0.7" opacity="0.9"/><circle cx="502" cy="183" r="1.8" opacity="0.9"/><circle cx="71" cy="430" r="0.9" opacity="0.35"/><circle cx="693" cy="301" r="0.9" opacity="0.35"/><circle cx="668" cy="101" r="1.4" opacity="0.5"/><circle cx="649" cy="434" r="1.8" opacity="0.5"/><circle cx="124" cy="434" r="0.9" opacity="0.7"/><circle cx="117" cy="541" r="1.8" opacity="0.35"/><circle cx="743" cy="377" r="1.8" opacity="0.9"/><circle cx="933" cy="354" r="1.4" opacity="0.7"/><circle cx="360" cy="604" r="0.9" opacity="0.35"/><circle cx="689" cy="399" r="1.1" opacity="0.9"/><circle cx="346" cy="745" r="0.7" opacity="0.9"/><circle cx="198" cy="260" r="1.4" opacity="0.9"/><circle cx="47" cy="508" r="1.8" opacity="0.7"/><circle cx="408" cy="266" r="1.4" opacity="0.9"/><circle cx="83" cy="71" r="1.1" opacity="0.9"/><circle cx="836" cy="49" r="1.1" opacity="0.9"/><circle cx="342" cy="293" r="1.1" opacity="0.35"/><circle cx="1129" cy="270" r="1.8" opacity="0.35"/><circle cx="592" cy="166" r="1.1" opacity="0.5"/><circle cx="886" cy="302" r="1.4" opacity="0.35"/><circle cx="200" cy="305" r="1.1" opacity="0.5"/><circle cx="983" cy="657" r="1.1" opacity="0.9"/><circle cx="1184" cy="519" r="1.4" opacity="0.5"/><circle cx="181" cy="134" r="0.9" opacity="0.5"/><circle cx="14" cy="632" r="0.9" opacity="0.7"/><circle cx="338" cy="111" r="1.8" opacity="0.7"/><circle cx="732" cy="242" r="0.9" opacity="0.35"/><circle cx="548" cy="662" r="1.8" opacity="0.9"/><circle cx="478" cy="300" r="1.4" opacity="0.9"/><circle cx="75" cy="51" r="0.9" opacity="0.9"/><circle cx="195" cy="258" r="0.7" opacity="0.35"/><circle cx="0" cy="115" r="0.7" opacity="0.7"/><circle cx="736" cy="53" r="0.9" opacity="0.9"/><circle cx="178" cy="192" r="1.1" opacity="0.7"/><circle cx="569" cy="88" r="1.4" opacity="0.9"/><circle cx="576" cy="237" r="0.9" opacity="0.35"/><circle cx="900" cy="563" r="1.4" opacity="0.5"/><circle cx="620" cy="156" r="1.8" opacity="0.7"/><circle cx="176" cy="413" r="0.7" opacity="0.7"/><circle cx="1174" cy="656" r="1.1" opacity="0.7"/><circle cx="1090" cy="270" r="0.9" opacity="0.7"/><circle cx="764" cy="466" r="0.9" opacity="0.5"/><circle cx="982" cy="562" r="0.9" opacity="0.5"/><circle cx="621" cy="270" r="0.7" opacity="0.35"/><circle cx="948" cy="359" r="0.9" opacity="0.7"/><circle cx="537" cy="712" r="1.1" opacity="0.7"/><circle cx="97" cy="78" r="1.4" opacity="0.5"/><circle cx="405" cy="367" r="1.8" opacity="0.35"/><circle cx="575" cy="496" r="0.7" opacity="0.35"/><circle cx="1092" cy="595" r="0.9" opacity="0.9"/><circle cx="1067" cy="330" r="1.1" opacity="0.35"/><circle cx="961" cy="738" r="1.4" opacity="0.9"/><circle cx="482" cy="720" r="0.9" opacity="0.5"/><circle cx="1192" cy="21" r="1.8" opacity="0.9"/><circle cx="968" cy="111" r="1.8" opacity="0.9"/><circle cx="789" cy="266" r="1.8" opacity="0.5"/><circle cx="26" cy="608" r="0.7" opacity="0.5"/><circle cx="521" cy="663" r="0.9" opacity="0.35"/><circle cx="302" cy="223" r="0.9" opacity="0.7"/><circle cx="311" cy="318" r="0.9" opacity="0.35"/><circle cx="1092" cy="269" r="1.4" opacity="0.9"/><circle cx="993" cy="667" r="0.9" opacity="0.5"/><circle cx="628" cy="14" r="1.4" opacity="0.5"/><circle cx="730" cy="590" r="0.9" opacity="0.5"/><circle cx="170" cy="471" r="0.7" opacity="0.35"/><circle cx="391" cy="394" r="1.8" opacity="0.9"/></g></svg>
+  <div class="wrap">
+    <div>
+      <span class="soon"><span class="pulse"></span>Coming soon to iPhone and Android</span>
+      <div class="g-brand"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><radialGradient id="gp" cx="38%" cy="32%" r="70%"><stop offset="0" stop-color="#ffd35a"/><stop offset="1" stop-color="#e08a00"/></radialGradient></defs><rect width="64" height="64" rx="18" fill="#18236a"/><ellipse cx="32" cy="33" rx="26" ry="8.5" fill="none" stroke="#b8c2ff" stroke-width="2.4" transform="rotate(-22 32 33)" opacity=".9"/><circle cx="32" cy="32" r="13" fill="url(#gp)"/><path d="M8.6 42.2 C 20 50, 44 40, 55.6 23.8" fill="none" stroke="#b8c2ff" stroke-width="2.4" transform="rotate(0)" opacity=".9"/><circle cx="50" cy="15" r="2.2" fill="#fff"/></svg>
+        <div><h2 id="graha-title">Graha</h2><div class="g-dev" lang="ne">ग्रह</div></div>
+      </div>
+      <p class="g-tag">Your Kundali and Rashifal, in your pocket.</p>
+      <p class="g-lead">An app I'm designing and building myself, rooted in the Nepali and Vedic Jyotish tradition I grew up with. It brings the chart your family would take to a pandit straight to your phone.</p>
+      <ul class="g-feats">
+        <li><div class="ic"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="1.5"/><path d="M3.5 3.5l17 17M20.5 3.5l-17 17M12 3.5L20.5 12 12 20.5 3.5 12z"/></svg></div><div><b>Janma Kundali</b><span>Your birth chart, worked out from your date, time and place of birth.</span></div></li>
+        <li><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg></div><div><b>Daily Rashifal</b><span>A fresh reading for your rashi every day.</span></div></li>
+        <li><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 21H20"/></svg></div><div><b>Rooted in tradition</b><span>Built on classical Nepali Jyotish, not generic sun-sign horoscopes.</span></div></li>
+      </ul>
+      <div class="g-cta">
+        <a class="btn btn-gold" href="mailto:yukeshupadhyaya@gmail.com?subject=Tell%20me%20when%20Graha%20launches">Tell me when it launches</a>
+        <div class="g-plat">
+          <span><svg viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 5h3"/></svg>iPhone</span>
+          <span><svg viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>Android</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="g-stage" aria-hidden="true">
+      <svg class="orbits" viewBox="0 0 600 600">
+        <circle class="ring" cx="300" cy="300" r="170"/><circle class="ring" cx="300" cy="300" r="230"/><circle class="ring" cx="300" cy="300" r="290"/>
+        <g class="spin"><circle cx="470" cy="300" r="11" fill="#f4a900"/></g>
+        <g class="spin s2"><circle cx="300" cy="70" r="8" fill="#b8c2ff"/><circle cx="300" cy="530" r="5" fill="#ff8a6b"/></g>
+        <g class="spin s3"><circle cx="10" cy="300" r="7" fill="#7fe0c2"/><circle cx="505" cy="95" r="4" fill="#ffffff"/></g>
+      </svg>
+      <div class="phone">
+        <div class="screen">
+          <div class="notch"></div>
+          <div class="sb"><span>9:41</span><span>● ● ●</span></div>
+          <div class="app-top"><div class="nm">Gra<em>ha</em></div><div class="av">YU</div></div>
+          <div class="app-sub" lang="ne">जन्म कुण्डली · Janma Kundali</div>
+          <div class="chart">
+            <svg viewBox="0 0 240 240" aria-hidden="true">
+              <rect x="4" y="4" width="232" height="232" rx="6" fill="#fffaf0" stroke="#1d1a3a" stroke-width="2"/>
+              <path d="M120 4 L178 62 L120 120 L62 62 Z" fill="#fff1c9"/>
+              <path d="M4 4 L236 236 M236 4 L4 236 M120 4 L236 120 L120 236 L4 120 Z" fill="none" stroke="#1d1a3a" stroke-width="2"/>
+              <g font-size="15" fill="#1d1a3a" text-anchor="middle">
+                <text x="120" y="58" fill="#c47f00">ल</text>
+                <text x="120" y="78" font-size="13">सू बु</text>
+                <text x="62" y="36" font-size="13">शु</text>
+                <text x="30" y="68" font-size="13">गु</text>
+                <text x="62" y="124" font-size="13">चं</text>
+                <text x="30" y="178" font-size="13">रा</text>
+                <text x="62" y="214" font-size="13">मं</text>
+                <text x="178" y="190" font-size="13">श</text>
+                <text x="210" y="72" font-size="13">के</text>
+              </g>
+              <g font-family="Instrument Sans, sans-serif" font-size="9" font-weight="600" fill="#8a86ad" text-anchor="middle">
+                <text x="120" y="112">1</text><text x="62" y="54">2</text><text x="22" y="94">3</text><text x="62" y="146">4</text><text x="22" y="150">5</text><text x="62" y="198">6</text><text x="120" y="138">7</text><text x="178" y="198">8</text><text x="218" y="150">9</text><text x="178" y="146">10</text><text x="218" y="94">11</text><text x="178" y="54">12</text>
+              </g>
+            </svg>
+          </div>
+          <div class="rf"><div class="t"><span lang="ne">आजको राशिफल</span><small>Today</small></div><div class="bar"></div><div class="bar" style="width:84%"></div><div class="bar" style="width:62%"></div></div>
+          <div class="tabs"><i class="on"></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="block exp" id="experience">
   <div class="wrap">
     <div class="s-head"><h2>Where I've led and learned</h2></div>
@@ -511,7 +636,7 @@
 
   document.querySelectorAll('.hangers line').forEach(function(l,i){l.style.setProperty('--i',i)});
 
-  var ids=['about','skills','projects','experience','education'],map={};
+  var ids=['about','skills','projects','graha','experience','education'],map={};
   document.querySelectorAll('.links a').forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
   function active(){var y=window.scrollY+140,cur=null;ids.forEach(function(id){var el=document.getElementById(id);if(el&&el.offsetTop<=y)cur=id});
     Object.keys(map).forEach(function(id){map[id].classList.toggle('active',id===cur)})}
