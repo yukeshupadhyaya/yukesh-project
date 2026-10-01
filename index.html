@@ -272,6 +272,9 @@
   .road b{display:block;color:var(--ink);font-size:16px}
   .road span{display:block;font-size:14px;color:var(--muted);margin-top:2px}
   .road .now span{color:#a26f00;font-weight:600}
+  .road .here{position:absolute;top:-38px;left:-16px;white-space:nowrap;font-style:normal;font-size:12px;font-weight:700;color:var(--ink);background:var(--gold);padding:4px 10px;border-radius:999px}
+  .road .here::after{content:"";position:absolute;left:20px;bottom:-6px;border-left:6px solid transparent;border-right:6px solid transparent;border-top:7px solid var(--gold)}
+  .m-card .road{margin-top:50px}
   .m-art{position:relative}
   .m-art svg{width:100%;height:auto;display:block}
   .wave{opacity:0}
@@ -347,7 +350,7 @@
     </a>
     <nav class="links" aria-label="Sections">
       <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
-      <a href="#mavtap" class="new">MavTap <i>Developing</i></a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#graha" class="new">Graha <i>Developing</i></a>
+      <a href="#mavtap" class="new">MavTap <i>Research</i></a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#graha" class="new">Graha <i>Developing</i></a>
     </nav>
     <a class="btn btn-sky" href="#contact">Get in touch</a>
     <button class="burger" id="burger" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
@@ -356,7 +359,7 @@
   </div>
   <nav class="mobile-menu" id="mobileMenu" aria-label="Sections">
     <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
-    <a href="#mavtap">MavTap (developing)</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#graha">Graha (developing)</a><a href="#contact">Contact</a>
+    <a href="#mavtap">MavTap (research)</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#graha">Graha (developing)</a><a href="#contact">Contact</a>
   </nav>
 </header>
 
@@ -598,11 +601,11 @@
         </svg>
       </div>
       <div>
-        <span class="soon"><span class="pulse"></span>Developing for iPhone and Android</span>
+        <span class="soon"><span class="pulse"></span>Researching for iPhone and Android</span>
         <h2 id="mav-title">Mav<span>Tap</span></h2>
         <p class="m-tag">Your phone is your campus key.</p>
         <div class="m-stores"><span class="lbl">Planned for</span><span class="st"><svg viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 5h3"/></svg>iPhone · App Store</span><span class="st"><svg viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>Android · Google Play</span></div>
-        <p class="m-lead">MavTap is my idea for an app on both iPhone and Android that lets Minnesota State students tap their phone on an NFC reader to get access on campus, the same way you'd tap to pay. Only real Mavericks get in, because every account is verified with an MNSU email. It's my own idea and my first mobile app, and I'm now building it, researching each piece carefully as I go.</p>
+        <p class="m-lead">MavTap is my idea for an app on both iPhone and Android that lets Minnesota State students tap their phone on an NFC reader to get access on campus, the same way you'd tap to pay. Only real Mavericks get in, because every account is verified with an MNSU email. It's my own idea and my first mobile app, and I'm researching it properly before I write the first line of code.</p>
       </div>
     </div>
 
@@ -626,8 +629,8 @@
         <h3>Where it's headed</h3>
         <div class="road">
           <div class="done"><b>Idea</b><span>Done</span></div>
-          <div class="done"><b>Research</b><span>Ongoing</span></div>
-          <div class="now"><b>Building</b><span>Happening now</span></div>
+          <div class="now"><i class="here">Right now</i><b>Research</b><span>Happening now</span></div>
+          <div><b>Building</b><span>Next</span></div>
           <div><b>Campus pilot</b><span>The goal</span></div>
         </div>
         <ul style="margin-top:26px">
