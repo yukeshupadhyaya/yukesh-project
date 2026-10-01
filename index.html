@@ -157,6 +157,11 @@
   .certs span{display:block;color:var(--muted);font-size:14.5px;margin-top:3px}
   .certs a{flex-shrink:0;font-weight:600;font-size:14.5px;color:var(--sky-deep);text-decoration:none;border:1.5px solid var(--line-2);padding:8px 14px;border-radius:10px;transition:border-color .2s,background .2s}
   .certs a:hover{border-color:var(--sky);background:var(--sky-soft)}
+  .certs .taking{background:var(--gold-soft);border:1px solid #f1dca0;margin:14px 0 6px;padding:18px 16px;border-radius:16px}
+  .certs .c-courses{font-size:13.5px;margin-top:6px;color:var(--ink-2)}
+  .now-tag{flex-shrink:0;display:inline-flex;align-items:center;gap:8px;font-style:normal;font-weight:700;font-size:13.5px;color:var(--ink);background:var(--gold);padding:7px 13px;border-radius:999px;white-space:nowrap}
+  .now-tag i{width:8px;height:8px;border-radius:50%;background:var(--ink);position:relative}
+  .now-tag i::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--ink);opacity:.5;animation:ping 1.8s ease-out infinite}
 
   /* contact */
   .contact{background:var(--sky);color:#fff;position:relative;overflow:hidden}
@@ -330,7 +335,8 @@
   @media (max-width:520px){
     body{font-size:16.5px}
     .portrait .tag{left:auto;right:-10px;bottom:18px}
-    .certs li{flex-wrap:wrap}
+    .certs li{flex-wrap:wrap;gap:12px}
+    .certs .c-txt{flex-basis:100%}
     .facts div{flex-direction:column;gap:2px}
     .facts dd{text-align:left}
   }
@@ -464,7 +470,7 @@
   <div class="wrap">
     <div class="s-head"><h2>What I work with</h2><p>A toolkit that covers both sides: the structure and the software that checks it.</p></div>
     <div class="skill-row"><h3>Engineering and analysis</h3><div class="chips"><span class="chip">Statics</span><span class="chip">Mechanics of Materials</span><span class="chip">Structural Analysis</span><span class="chip">Engineering Mechanics</span><span class="chip">Physics I–III</span><span class="chip">Calculus III</span></div></div>
-    <div class="skill-row"><h3>Design and CAD</h3><div class="chips"><span class="chip">AutoCAD</span><span class="chip">CAD for Civil Engineering</span><span class="chip">Technical Drawing</span><span class="chip">Drafting and Detailing</span><span class="chip">Blueprints</span></div></div>
+    <div class="skill-row"><h3>Design and CAD</h3><div class="chips"><span class="chip">AutoCAD</span><span class="chip">CAD for Civil Engineering</span><span class="chip">Technical Drawing</span><span class="chip">Drafting and Detailing</span><span class="chip">Blueprints</span><span class="chip">GIS and ArcGIS (in progress)</span></div></div>
     <div class="skill-row"><h3>Programming</h3><div class="chips"><span class="chip">Python</span><span class="chip">C#</span><span class="chip">Java</span><span class="chip">SystemVerilog</span><span class="chip">Git</span><span class="chip">Node.js</span><span class="chip">Terminal and Bash</span><span class="chip">Network Security</span></div></div>
     <div class="skill-row"><h3>Software and creative</h3><div class="chips"><span class="chip">Advanced Excel</span><span class="chip">Microsoft 365</span><span class="chip">Photoshop</span><span class="chip">Lightroom</span><span class="chip">Premiere Pro</span></div></div>
   </div>
@@ -678,6 +684,7 @@
         <div class="meta">Sophomore, expected 2028</div>
       </div>
       <ul class="certs">
+        <li class="taking"><div class="c-txt"><b>Geographic Information Systems (GIS) Specialization</b><span>University of California, Davis, on Coursera, built with Esri</span><span class="c-courses">Fundamentals of GIS · GIS Data Formats, Design and Quality · Geospatial Analysis with ArcGIS · GIS Applications Across Industries</span></div><em class="now-tag"><i></i>Currently taking</em></li>
         <li><div class="c-txt"><b>Cyber Defense Fundamentals: Securing Networks and Systems</b><span>Minnesota State University, Mankato, Aug 2026</span></div><a href="https://www.coursera.org/account/accomplishments/verify/V2DEYF0PDSSM" target="_blank" rel="noopener">Verify certificate</a></li>
         <li><div class="c-txt"><b>Introduction to Engineering Mechanics</b><span>Georgia Institute of Technology, Aug 2026</span></div><a href="https://www.coursera.org/account/accomplishments/verify/RF0MF3LUA6GE" target="_blank" rel="noopener">Verify certificate</a></li>
         <li><div class="c-txt"><b>Applications in Engineering Mechanics</b><span>Georgia Institute of Technology, Aug 2026</span></div><a href="https://www.coursera.org/account/accomplishments/verify/G6MZVEN4JND0" target="_blank" rel="noopener">Verify certificate</a></li>
