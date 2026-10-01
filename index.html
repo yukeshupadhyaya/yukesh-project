@@ -246,6 +246,10 @@
   .mav h2 span{color:var(--gold)}
   .mav .m-tag{font-family:var(--display);font-size:clamp(22px,2.4vw,30px);font-weight:600;color:var(--ink);margin-top:14px;line-height:1.2}
   .mav .m-lead{margin-top:16px;font-size:18px;max-width:52ch}
+  .m-stores{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:18px}
+  .m-stores .lbl{font-size:14px;font-weight:600;color:var(--muted);margin-right:2px}
+  .m-stores .st{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;color:var(--mp-deep);background:var(--white);border:1.5px solid var(--mp-line);padding:8px 13px;border-radius:12px}
+  .m-stores svg{width:17px;height:17px;fill:none;stroke:var(--mp);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
   .pitch{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}
   .pitch > div{background:var(--white);border:1px solid var(--mp-line);border-radius:20px;padding:22px 22px 24px}
   .pitch .n{font-family:var(--display);font-weight:700;font-size:15px;color:var(--mp);display:flex;align-items:center;gap:10px}
@@ -330,7 +334,7 @@
     </a>
     <nav class="links" aria-label="Sections">
       <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
-      <a href="#mavtap">MavTap</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#graha" class="new">Graha <i>New</i></a>
+      <a href="#mavtap">MavTap</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#graha" class="new">Graha <i>Developing</i></a>
     </nav>
     <a class="btn btn-sky" href="#contact">Get in touch</a>
     <button class="burger" id="burger" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
@@ -339,7 +343,7 @@
   </div>
   <nav class="mobile-menu" id="mobileMenu" aria-label="Sections">
     <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
-    <a href="#mavtap">MavTap (research)</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#graha">Graha (coming soon)</a><a href="#contact">Contact</a>
+    <a href="#mavtap">MavTap (research)</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#graha">Graha (developing)</a><a href="#contact">Contact</a>
   </nav>
 </header>
 
@@ -583,13 +587,14 @@
         <span class="research"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>Currently researching</span>
         <h2 id="mav-title">Mav<span>Tap</span></h2>
         <p class="m-tag">Your phone is your campus key.</p>
-        <p class="m-lead">MavTap is my idea for an Android app that lets Minnesota State students tap their phone on an NFC reader to get access on campus, the same way you'd tap to pay. Only real Mavericks get in, because every account is verified with an MNSU email. It's my own idea and my first Android project, and I'm researching it properly before I write the first line of code.</p>
+        <div class="m-stores"><span class="lbl">Planned for</span><span class="st"><svg viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 5h3"/></svg>iPhone · App Store</span><span class="st"><svg viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>Android · Google Play</span></div>
+        <p class="m-lead">MavTap is my idea for an app on both iPhone and Android that lets Minnesota State students tap their phone on an NFC reader to get access on campus, the same way you'd tap to pay. Only real Mavericks get in, because every account is verified with an MNSU email. It's my own idea and my first mobile app, and I'm researching it properly before I write the first line of code.</p>
       </div>
     </div>
 
     <div class="pitch">
       <div><div class="n"><i>1</i>The problem</div><h3>One more thing to carry</h3><p>Students juggle a physical card for campus access, and a card is easy to forget or lose. A phone almost never gets left behind.</p></div>
-      <div><div class="n"><i>2</i>The idea</div><h3>Tap with your phone</h3><p>Use the NFC chip already inside Android phones so a quick tap does the same job as the card.</p></div>
+      <div><div class="n"><i>2</i>The idea</div><h3>Tap with your phone</h3><p>Use the NFC chip already inside most iPhones and Android phones so a quick tap does the same job as the card.</p></div>
       <div><div class="n"><i>3</i>The trust layer</div><h3>Mavericks only</h3><p>Sign up with an MNSU email, so every account belongs to a real student before it can open anything.</p></div>
     </div>
 
@@ -597,7 +602,7 @@
       <div class="m-card">
         <h3>What I'm figuring out</h3>
         <ul>
-          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 1 1 3.4 2.4c-.6.3-1 .8-1 1.5v.6M12 16.8v.2"/></svg><span>How Android's built-in NFC can act like an access card when you tap a reader</span></li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 1 1 3.4 2.4c-.6.3-1 .8-1 1.5v.6M12 16.8v.2"/></svg><span>How iPhone and Android NFC can each act like an access card, and the rules Apple and Google set for it</span></li>
           <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 1 1 3.4 2.4c-.6.3-1 .8-1 1.5v.6M12 16.8v.2"/></svg><span>The cleanest way to confirm a student owns their MNSU email</span></li>
           <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 1 1 3.4 2.4c-.6.3-1 .8-1 1.5v.6M12 16.8v.2"/></svg><span>What campus readers and systems would need to talk to the app</span></li>
           <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 1 1 3.4 2.4c-.6.3-1 .8-1 1.5v.6M12 16.8v.2"/></svg><span>How to keep student data private and stop anyone from copying a pass</span></li>
@@ -612,7 +617,7 @@
           <div><b>Campus pilot</b><span>The goal</span></div>
         </div>
         <ul style="margin-top:26px">
-          <li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Learning Android development from the ground up to build it myself</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Learning mobile development for iPhone and Android from the ground up to build it myself</span></li>
           <li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Open to advice from anyone who works on campus access or NFC</span></li>
         </ul>
       </div>
@@ -668,7 +673,7 @@
   <svg class="stars" viewBox="0 0 1200 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="#fff"><circle cx="389" cy="115" r="0.7" opacity="0.35"/><circle cx="986" cy="72" r="1.8" opacity="0.35"/><circle cx="1092" cy="163" r="0.7" opacity="0.9"/><circle cx="502" cy="183" r="1.8" opacity="0.9"/><circle cx="71" cy="430" r="0.9" opacity="0.35"/><circle cx="693" cy="301" r="0.9" opacity="0.35"/><circle cx="668" cy="101" r="1.4" opacity="0.5"/><circle cx="649" cy="434" r="1.8" opacity="0.5"/><circle cx="124" cy="434" r="0.9" opacity="0.7"/><circle cx="117" cy="541" r="1.8" opacity="0.35"/><circle cx="743" cy="377" r="1.8" opacity="0.9"/><circle cx="933" cy="354" r="1.4" opacity="0.7"/><circle cx="360" cy="604" r="0.9" opacity="0.35"/><circle cx="689" cy="399" r="1.1" opacity="0.9"/><circle cx="346" cy="745" r="0.7" opacity="0.9"/><circle cx="198" cy="260" r="1.4" opacity="0.9"/><circle cx="47" cy="508" r="1.8" opacity="0.7"/><circle cx="408" cy="266" r="1.4" opacity="0.9"/><circle cx="83" cy="71" r="1.1" opacity="0.9"/><circle cx="836" cy="49" r="1.1" opacity="0.9"/><circle cx="342" cy="293" r="1.1" opacity="0.35"/><circle cx="1129" cy="270" r="1.8" opacity="0.35"/><circle cx="592" cy="166" r="1.1" opacity="0.5"/><circle cx="886" cy="302" r="1.4" opacity="0.35"/><circle cx="200" cy="305" r="1.1" opacity="0.5"/><circle cx="983" cy="657" r="1.1" opacity="0.9"/><circle cx="1184" cy="519" r="1.4" opacity="0.5"/><circle cx="181" cy="134" r="0.9" opacity="0.5"/><circle cx="14" cy="632" r="0.9" opacity="0.7"/><circle cx="338" cy="111" r="1.8" opacity="0.7"/><circle cx="732" cy="242" r="0.9" opacity="0.35"/><circle cx="548" cy="662" r="1.8" opacity="0.9"/><circle cx="478" cy="300" r="1.4" opacity="0.9"/><circle cx="75" cy="51" r="0.9" opacity="0.9"/><circle cx="195" cy="258" r="0.7" opacity="0.35"/><circle cx="0" cy="115" r="0.7" opacity="0.7"/><circle cx="736" cy="53" r="0.9" opacity="0.9"/><circle cx="178" cy="192" r="1.1" opacity="0.7"/><circle cx="569" cy="88" r="1.4" opacity="0.9"/><circle cx="576" cy="237" r="0.9" opacity="0.35"/><circle cx="900" cy="563" r="1.4" opacity="0.5"/><circle cx="620" cy="156" r="1.8" opacity="0.7"/><circle cx="176" cy="413" r="0.7" opacity="0.7"/><circle cx="1174" cy="656" r="1.1" opacity="0.7"/><circle cx="1090" cy="270" r="0.9" opacity="0.7"/><circle cx="764" cy="466" r="0.9" opacity="0.5"/><circle cx="982" cy="562" r="0.9" opacity="0.5"/><circle cx="621" cy="270" r="0.7" opacity="0.35"/><circle cx="948" cy="359" r="0.9" opacity="0.7"/><circle cx="537" cy="712" r="1.1" opacity="0.7"/><circle cx="97" cy="78" r="1.4" opacity="0.5"/><circle cx="405" cy="367" r="1.8" opacity="0.35"/><circle cx="575" cy="496" r="0.7" opacity="0.35"/><circle cx="1092" cy="595" r="0.9" opacity="0.9"/><circle cx="1067" cy="330" r="1.1" opacity="0.35"/><circle cx="961" cy="738" r="1.4" opacity="0.9"/><circle cx="482" cy="720" r="0.9" opacity="0.5"/><circle cx="1192" cy="21" r="1.8" opacity="0.9"/><circle cx="968" cy="111" r="1.8" opacity="0.9"/><circle cx="789" cy="266" r="1.8" opacity="0.5"/><circle cx="26" cy="608" r="0.7" opacity="0.5"/><circle cx="521" cy="663" r="0.9" opacity="0.35"/><circle cx="302" cy="223" r="0.9" opacity="0.7"/><circle cx="311" cy="318" r="0.9" opacity="0.35"/><circle cx="1092" cy="269" r="1.4" opacity="0.9"/><circle cx="993" cy="667" r="0.9" opacity="0.5"/><circle cx="628" cy="14" r="1.4" opacity="0.5"/><circle cx="730" cy="590" r="0.9" opacity="0.5"/><circle cx="170" cy="471" r="0.7" opacity="0.35"/><circle cx="391" cy="394" r="1.8" opacity="0.9"/></g></svg>
   <div class="wrap">
     <div>
-      <span class="soon"><span class="pulse"></span>Coming soon to iPhone and Android</span>
+      <span class="soon"><span class="pulse"></span>Developing for iPhone and Android</span>
       <div class="g-brand"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><radialGradient id="gp" cx="38%" cy="32%" r="70%"><stop offset="0" stop-color="#ffd35a"/><stop offset="1" stop-color="#e08a00"/></radialGradient></defs><rect width="64" height="64" rx="18" fill="#18236a"/><ellipse cx="32" cy="33" rx="26" ry="8.5" fill="none" stroke="#b8c2ff" stroke-width="2.4" transform="rotate(-22 32 33)" opacity=".9"/><circle cx="32" cy="32" r="13" fill="url(#gp)"/><path d="M8.6 42.2 C 20 50, 44 40, 55.6 23.8" fill="none" stroke="#b8c2ff" stroke-width="2.4" transform="rotate(0)" opacity=".9"/><circle cx="50" cy="15" r="2.2" fill="#fff"/></svg>
         <div><h2 id="graha-title">Graha</h2><div class="g-dev" lang="ne">ग्रह</div></div>
       </div>
