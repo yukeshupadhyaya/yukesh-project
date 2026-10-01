@@ -43,11 +43,11 @@
   /* nav */
   .nav{position:sticky;top:0;z-index:40;background:rgba(246,249,253,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .25s;padding-top:env(safe-area-inset-top,0px)}
   .nav.scrolled{border-bottom-color:var(--line)}
-  .nav-in{max-width:var(--maxw);margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:28px}
+  .nav-in{max-width:var(--maxw);margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:20px}
   .brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:18px;color:var(--ink);margin-right:auto}
   .brand svg{width:34px;height:34px;flex-shrink:0}
-  .links{display:flex;gap:4px}
-  .links a{text-decoration:none;font-size:15px;font-weight:500;color:var(--ink-2);padding:8px 12px;border-radius:8px;transition:color .2s,background .2s}
+  .links{display:flex;gap:2px}
+  .links a{text-decoration:none;font-size:15px;font-weight:500;color:var(--ink-2);padding:8px 10px;border-radius:8px;transition:color .2s,background .2s}
   .links a:hover{background:var(--sky-soft);color:var(--sky-deep)}
   .links a.active{color:var(--sky)}
   .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--body);font-weight:600;font-size:15.5px;text-decoration:none;padding:13px 22px;border-radius:12px;border:2px solid transparent;transition:transform .2s,background .2s,border-color .2s,color .2s;cursor:pointer}
@@ -56,7 +56,8 @@
   .btn-sky:hover{background:var(--sky-deep)}
   .btn-line{border-color:var(--line-2);color:var(--ink);background:var(--white)}
   .btn-line:hover{border-color:var(--sky);color:var(--sky-deep)}
-  .nav .btn{padding:10px 18px;font-size:14.5px}
+  .nav .btn{padding:10px 18px;font-size:14.5px;white-space:nowrap}
+  .brand,.links a{white-space:nowrap}
   .burger{display:none;background:var(--white);border:1px solid var(--line-2);border-radius:10px;width:44px;height:44px;cursor:pointer;align-items:center;justify-content:center}
   .burger svg{width:22px;height:22px;stroke:var(--ink);stroke-width:2;stroke-linecap:round}
   .mobile-menu{display:none;flex-direction:column;padding:6px 24px 18px;gap:2px;border-bottom:1px solid var(--line);background:var(--paper)}
@@ -290,7 +291,7 @@
   }
 
   /* responsive */
-  @media (max-width:1120px){
+  @media (max-width:1240px){
     .links,.nav .btn{display:none}
     .burger{display:inline-flex}
     .mobile-menu.open{display:flex}
@@ -334,7 +335,7 @@
     </a>
     <nav class="links" aria-label="Sections">
       <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
-      <a href="#mavtap">MavTap</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#graha" class="new">Graha <i>Developing</i></a>
+      <a href="#mavtap" class="new">MavTap <i>Developing</i></a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#graha" class="new">Graha <i>Developing</i></a>
     </nav>
     <a class="btn btn-sky" href="#contact">Get in touch</a>
     <button class="burger" id="burger" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
@@ -343,7 +344,7 @@
   </div>
   <nav class="mobile-menu" id="mobileMenu" aria-label="Sections">
     <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
-    <a href="#mavtap">MavTap (research)</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#graha">Graha (developing)</a><a href="#contact">Contact</a>
+    <a href="#mavtap">MavTap (developing)</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#graha">Graha (developing)</a><a href="#contact">Contact</a>
   </nav>
 </header>
 
@@ -584,11 +585,11 @@
         </svg>
       </div>
       <div>
-        <span class="research"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>Currently researching</span>
+        <span class="soon"><span class="pulse"></span>Developing for iPhone and Android</span>
         <h2 id="mav-title">Mav<span>Tap</span></h2>
         <p class="m-tag">Your phone is your campus key.</p>
         <div class="m-stores"><span class="lbl">Planned for</span><span class="st"><svg viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 5h3"/></svg>iPhone · App Store</span><span class="st"><svg viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>Android · Google Play</span></div>
-        <p class="m-lead">MavTap is my idea for an app on both iPhone and Android that lets Minnesota State students tap their phone on an NFC reader to get access on campus, the same way you'd tap to pay. Only real Mavericks get in, because every account is verified with an MNSU email. It's my own idea and my first mobile app, and I'm researching it properly before I write the first line of code.</p>
+        <p class="m-lead">MavTap is my idea for an app on both iPhone and Android that lets Minnesota State students tap their phone on an NFC reader to get access on campus, the same way you'd tap to pay. Only real Mavericks get in, because every account is verified with an MNSU email. It's my own idea and my first mobile app, and I'm now building it, researching each piece carefully as I go.</p>
       </div>
     </div>
 
@@ -612,8 +613,8 @@
         <h3>Where it's headed</h3>
         <div class="road">
           <div class="done"><b>Idea</b><span>Done</span></div>
-          <div class="now"><b>Research</b><span>Happening now</span></div>
-          <div><b>Prototype</b><span>Next</span></div>
+          <div class="done"><b>Research</b><span>Ongoing</span></div>
+          <div class="now"><b>Building</b><span>Happening now</span></div>
           <div><b>Campus pilot</b><span>The goal</span></div>
         </div>
         <ul style="margin-top:26px">
@@ -767,7 +768,7 @@
   function setMenu(open){menu.classList.toggle('open',open);burger.setAttribute('aria-expanded',String(open));burger.setAttribute('aria-label',open?'Close menu':'Open menu')}
   burger.addEventListener('click',function(){setMenu(!menu.classList.contains('open'))});
   menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
-  window.addEventListener('resize',function(){if(window.innerWidth>1120)setMenu(false)});
+  window.addEventListener('resize',function(){if(window.innerWidth>1240)setMenu(false)});
 
   document.querySelectorAll('.hangers line').forEach(function(l,i){l.style.setProperty('--i',i)});
 
