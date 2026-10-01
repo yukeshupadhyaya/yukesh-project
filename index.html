@@ -289,6 +289,18 @@
     .road{grid-template-columns:1fr 1fr;row-gap:22px}
     .road::before{display:none}
   }
+  .mav{background:var(--paper);background-image:none}
+  .mav::before{display:none}
+  .mav .wrap{padding-block:96px}
+  .mav-frame{position:relative;border:5px solid var(--mp-deep);border-radius:34px;padding:60px 52px 52px;
+    background-color:#fbf9fe;background-image:linear-gradient(var(--mp-line) 1px,transparent 1px),linear-gradient(90deg,var(--mp-line) 1px,transparent 1px);background-size:32px 32px;background-position:-1px -1px;
+    box-shadow:16px 16px 0 var(--gold),16px 16px 0 5px var(--mp-deep)}
+  .mav-frame .pitch{margin-top:48px}
+  @media (max-width:860px){
+    .mav .wrap{padding-block:64px}
+    .mav-frame{padding:36px 22px 26px;border-width:4px;border-radius:26px;box-shadow:9px 9px 0 var(--gold),9px 9px 0 4px var(--mp-deep)}
+    .mav-frame .soon{font-size:12.5px;gap:8px;padding:6px 11px 6px 9px}
+  }
 
   /* responsive */
   @media (max-width:1240px){
@@ -548,6 +560,7 @@
 
 <section class="mav" id="mavtap" aria-labelledby="mav-title">
   <div class="wrap">
+  <div class="mav-frame">
     <div class="mav-top">
       <div class="m-art">
         <svg viewBox="0 0 520 440" aria-hidden="true">
@@ -623,6 +636,7 @@
         </ul>
       </div>
     </div>
+  </div>
   </div>
 </section>
 
